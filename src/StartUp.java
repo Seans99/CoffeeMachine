@@ -9,35 +9,35 @@ public class StartUp {
     public static int cacaoAmount;
 
     //Getter and Setters for all ingredients.
-    public static double getWaterAmount() {
+    public double getWaterAmount() {
         return waterAmount;
     }
 
-    public static void setWaterAmount(double waterAmount) {
+    public void setWaterAmount(double waterAmount) {
         StartUp.waterAmount = waterAmount;
     }
 
-    public static int getCoffeeAmount() {
+    public int getCoffeeAmount() {
         return coffeeAmount;
     }
 
-    public static void setCoffeeAmount(int coffeeAmount) {
+    public void setCoffeeAmount(int coffeeAmount) {
         StartUp.coffeeAmount = coffeeAmount;
     }
 
-    public static double getMilkAmount() {
+    public double getMilkAmount() {
         return milkAmount;
     }
 
-    public static void setMilkAmount(double milkAmount) {
+    public void setMilkAmount(double milkAmount) {
         StartUp.milkAmount = milkAmount;
     }
 
-    public static int getCacaoAmount() {
+    public int getCacaoAmount() {
         return cacaoAmount;
     }
 
-    public static void setCacaoAmount(int cacaoAmount) {
+    public void setCacaoAmount(int cacaoAmount) {
         StartUp.cacaoAmount = cacaoAmount;
     }
 
