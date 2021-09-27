@@ -10,6 +10,7 @@ public class MainMenu {
         //Objects for the other classes.
         CleanMachine clean = new CleanMachine();
         MakeCoffee make = new MakeCoffee();
+        StartUp startup = new StartUp();
 
         //Outputs Main menu.
         System.out.println("-----------------------------");
@@ -39,10 +40,10 @@ public class MainMenu {
                     //Shows status of ingredients in machine.
                     case 1:
                         System.out.println("Current Status:");
-                        System.out.println("Available water(Liters): " + StartUp.getWaterAmount());
-                        System.out.println("Available Coffee(Grams): " + StartUp.getCoffeeAmount());
-                        System.out.println("Available milk(Liters): " + StartUp.getMilkAmount());
-                        System.out.println("Available Cacao(Grams): " + StartUp.getCacaoAmount());
+                        System.out.println("Available water(Liters): " + startup.getWaterAmount());
+                        System.out.println("Available Coffee(Grams): " + startup.getCoffeeAmount());
+                        System.out.println("Available milk(Liters): " + startup.getMilkAmount());
+                        System.out.println("Available Cacao(Grams): " + startup.getCacaoAmount());
                         startMenu();
                         break;
 
@@ -56,8 +57,8 @@ public class MainMenu {
                         /*If machine is empty system gives output and returns to main menu,
                         otherwise cleans machine.
                         */
-                        if (StartUp.getCoffeeAmount() == 0 && StartUp.getWaterAmount() == 0 &&
-                                StartUp.getMilkAmount() == 0 && StartUp.getCacaoAmount() == 0) {
+                        if (startup.getCoffeeAmount() == 0 && startup.getWaterAmount() == 0 &&
+                                startup.getMilkAmount() == 0 && startup.getCacaoAmount() == 0) {
                             System.out.println("No cleaning needed, machine is empty.");
                             startMenu();
                         } else {
@@ -70,7 +71,7 @@ public class MainMenu {
                         make.makeCoffee();
                         break;
 
-                    /*Shows what coffe has already been made.
+                    /*Shows what coffee has already been made.
                     if no drinks made the System will show output and go back to main menu.
                     */
                     case 5:
@@ -112,6 +113,7 @@ public class MainMenu {
     public void addIngredient() {
 
         MainMenu menu = new MainMenu();
+        StartUp startup = new StartUp();
 
         double maxWater = 1;
         int maxCoffeePowder = 20;
@@ -119,10 +121,10 @@ public class MainMenu {
         int maxCacao = 20;
 
         System.out.println("Filling machine...");
-        StartUp.setWaterAmount(maxWater);
-        StartUp.setCoffeeAmount(maxCoffeePowder);
-        StartUp.setMilkAmount(maxMilk);
-        StartUp.setCacaoAmount(maxCacao);
+        startup.setWaterAmount(maxWater);
+        startup.setCoffeeAmount(maxCoffeePowder);
+        startup.setMilkAmount(maxMilk);
+        startup.setCacaoAmount(maxCacao);
         menu.startMenu();
     }
 }
