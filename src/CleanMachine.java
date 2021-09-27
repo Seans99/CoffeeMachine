@@ -2,12 +2,13 @@ import java.util.Scanner;
 
 public class CleanMachine {
 
-    public void cleanMachine() {
+   public void cleanMachine() {
 
         //Object for other classes.
         Scanner scan = new Scanner(System.in);
         MainMenu menu = new MainMenu();
         CleanMachine clean = new CleanMachine();
+        StartUp startup = new StartUp();
 
         double cleanWater = 0;
         int cleanCoffeePowder = 0;
@@ -27,10 +28,10 @@ public class CleanMachine {
         if (input.equals("Y") || input.equals("y")) {
 
             System.out.println("Cleaning machine...");
-            StartUp.setWaterAmount(cleanWater);
-            StartUp.setMilkAmount(cleanMilk);
-            StartUp.setCoffeeAmount(cleanCoffeePowder);
-            StartUp.setCacaoAmount(cleanCacao);
+            startup.setWaterAmount(cleanWater);
+            startup.setMilkAmount(cleanMilk);
+            startup.setCoffeeAmount(cleanCoffeePowder);
+            startup.setCacaoAmount(cleanCacao);
             System.out.println("Machine cleaned!");
             System.out.println("Returning to menu...");
             menu.startMenu();
