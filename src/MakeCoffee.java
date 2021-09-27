@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class MakeCoffee {
 
-    //Array list for showing what kind of drinks has been made.
+   //Array list for showing what kind of drinks has been made.
     public static ArrayList<String> coffeeMade = new ArrayList<>();
 
     public ArrayList<String> getCoffeeMade() {
@@ -19,6 +19,7 @@ public class MakeCoffee {
         //Objects for other classes
         MainMenu menu = new MainMenu();
         StartUp start = new StartUp();
+        StartUp startup = new StartUp();
 
         //Scanner for user input.
         Scanner scan = new Scanner(System.in);
@@ -45,13 +46,13 @@ public class MakeCoffee {
             if low on ingredients gives output and goes back to choose new drink.
              */
             case 1:
-                if (StartUp.getCoffeeAmount() == 0 && StartUp.getWaterAmount() == 0) {
-                    System.out.println("No Water, Coffee Powder and milk left.");
+                if (startup.getCoffeeAmount() == 0 && startup.getWaterAmount() == 0) {
+                    System.out.println("No Water and Coffee Powder left.");
                     makeCoffee();
-                } else if (StartUp.getCoffeeAmount() == 0) {
+                } else if (startup.getCoffeeAmount() == 0) {
                     System.out.println("No Coffee Powder left.");
                     makeCoffee();
-                } else if (StartUp.getWaterAmount() == 0) {
+                } else if (startup.getWaterAmount() == 0) {
                     System.out.println("No Water left.");
                     makeCoffee();
                 }
@@ -67,16 +68,16 @@ public class MakeCoffee {
                 break;
 
             case 2:
-                if (StartUp.getCoffeeAmount() == 0 && StartUp.getWaterAmount() == 0 && StartUp.getMilkAmount() == 0) {
+                if (startup.getCoffeeAmount() == 0 && startup.getWaterAmount() == 0 && startup.getMilkAmount() == 0) {
                     System.out.println("No Water, Coffee Powder and milk left.");
                     makeCoffee();
-                } else if (StartUp.getCoffeeAmount() == 0) {
+                } else if (startup.getCoffeeAmount() == 0) {
                     System.out.println("No Coffee Powder left.");
                     makeCoffee();
-                } else if (StartUp.getWaterAmount() == 0) {
+                } else if (startup.getWaterAmount() == 0) {
                     System.out.println("No Water left.");
                     makeCoffee();
-                } else if (StartUp.getMilkAmount() == 0) {
+                } else if (startup.getMilkAmount() == 0) {
                     System.out.println("No Milk left.");
                     makeCoffee();
                 }
@@ -93,13 +94,13 @@ public class MakeCoffee {
                 break;
 
             case 3:
-                if (StartUp.getCacaoAmount() == 0 && StartUp.getMilkAmount() == 0) {
-                    System.out.println("No Water, Coffee Powder and milk left.");
+                if (startup.getCacaoAmount() == 0 && startup.getMilkAmount() == 0) {
+                    System.out.println("No Cacao and milk left.");
                     makeCoffee();
-                } else if (StartUp.getCacaoAmount() == 0) {
+                } else if (startup.getCacaoAmount() == 0) {
                     System.out.println("No Cacao left.");
                     makeCoffee();
-                } else if (StartUp.getMilkAmount() == 0) {
+                } else if (startup.getMilkAmount() == 0) {
                     System.out.println("No Milk left.");
                     makeCoffee();
                 }
